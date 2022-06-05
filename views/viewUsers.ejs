@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login System</title>
+        <script src="https://kit.fontawesome.com/7cddce98d5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="icon" href="/images/traffic_small_logo.png">
+    </head>
+    <body>
+        <div class="users">
+            <h1>View Users</h1>
+            <a class="btn btn-primary succ_btn" href="/success">Home</a>
+            <a class="btn btn-danger succ_btn" href="/logout">Logout</a>            
+            <% var i = 0 %>
+            <table border="1px" class="user_table">
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Post Code</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>User Name</th>
+                    <th></th>
+                </tr>
+                
+                <% for (const result of results) { %>
+                    <tr>
+                        <td class="cell_padding"><%= results[i].firstName %> <%= results[i].lastName %></td>
+                        <td class="cell_padding"><%= results[i].address %></td>
+                        <td class="cell_padding"><%= results[i].postCode %></td>
+                        <td class="cell_padding"><%= results[i].phoneNumber %></td>
+                        <td class="cell_padding"><%= results[i].email %></td>
+                        <td class="cell_padding" id="userName" name="userName"><%= results[i].userName %></td>
+                        <td  class="cell_padding">
+                            <form action="/editUser/<%= results[i].userName %>" method="GET">
+                                <button class="singlebutton btn btn-primary" type="submit" name="send" value="edit">Edit</button>
+                            </form>
+
+                            <form action="/deleteUser/<%= results[i].userName %>" method="POST">
+                                <button class="singlebutton btn btn-danger" type="submit" name="send" value="delete">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% i++ } %>  
+            </table>
+        </div>
+    </body>
+</html>

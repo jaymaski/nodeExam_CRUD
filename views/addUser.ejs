@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login System</title>
+        <script src="https://kit.fontawesome.com/7cddce98d5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="icon" href="/images/traffic_small_logo.png">
+    </head>
+    <body>
+      <div class="regForm">
+        <h1>Add User</h1>
+        <form action = "/addUser" method = "POST">
+            <table>
+              <tr>
+                <td>
+                  <label for="firstName">First Name</label>
+                </td>
+
+                <td>
+                  <input type="text" id="firstName" name="firstName" required>
+                </td>
+              </tr>
+
+              
+            
+              <tr>
+                <td>
+                  <label for="lastName">Last Name</label>
+                </td>
+
+                <td>
+                  <input type="text" id="lastName" name="lastName" required>
+                </td>                
+              </tr>
+
+              <tr>
+                <td>
+                  <label for="address">Address</label>
+                </td>
+
+                <td>
+                  <input type="text" id="address" name="address" required>
+                </td>                
+              </tr>
+              
+              <tr>
+                <td>
+                  <label for="postCode">Post Code</label>
+                </td>
+
+                <td>
+                  <input type="number" id="postCode" name="postCode" required>
+                </td>                
+              </tr>
+              
+              <tr>
+                <td>
+                  <label for="phoneNumber">Phone Number</label>
+                </td>
+
+                <td>
+                  <input type="number" id="phoneNumber" name="phoneNumber" required>
+                </td>                
+              </tr>
+              
+              <tr>
+                <td>
+                  <label for="email">Email</label>
+                </td>
+
+                <td>
+                  <input type="email" id="email" name="email" required>
+                </td>                
+              </tr>
+              
+              <tr>
+                <td>
+                  <label for="userName">User Name</label>
+                </td>
+
+                <td>
+                  <input type="text" id="userName" name="userName" required>
+                </td>                
+              </tr>
+              
+              <tr>
+                <td>
+                  <label for="password">Password</label>
+                </td>
+
+                <td>
+                  <input type="password" id="password" name="password" required>
+                </td>                
+              </tr>
+            </table>
+          <a href="/login" class="btn btn-danger">Cancel</a>
+          <button type="submit" class="btn btn-success succ_btn">Register</button>
+        </form>
+      </div>
+    </body>
+</html>

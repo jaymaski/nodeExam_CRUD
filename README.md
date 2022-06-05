@@ -1,1 +1,4 @@
-# npm run devStart --run file
+# WebExportJS
+
+#### NPM Commands to run the server
+* npm run devStart = runs Express server with nodemon(development)
