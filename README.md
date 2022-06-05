@@ -1,1 +1,1 @@
-# npm run devStart
+# npm run devStart --run file
